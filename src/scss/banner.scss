@@ -1,0 +1,57 @@
+.flx-bunner {
+	box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  padding-inline: calc(6 * var(--scale-one));
+}
+
+.bunner-txt-cntnr {
+	margin-top: 15%;
+	margin-bottom: 21%;
+  @include flex(column, start, start);
+}
+
+.bunner-bs {  
+  width: 100%;
+  @include flex(row, start);
+}
+
+.bunner-bs__text {
+  @include tTNorms(
+    300,
+    calc(0.62 * var(--scale-one)),
+    calc(0.52 * var(--scale-one))
+  );
+  margin-left: 1%;
+  color: $red_clr-main;
+}
+
+.bunner-logo {
+  margin-block: 2%;
+  width: calc(24.1 * var(--scale-one));
+  width: calc(24.1 * var(--scale-one));
+}
+
+.bunner-title {
+  @include roboto(
+    300,
+    calc(1.5 * var(--scale-one)),
+    calc(2 * var(--scale-one))
+  );
+}
+
+.bunner-tel {
+  @include tTNorms(
+    300,
+    calc(1.65 * var(--scale-one)),
+    calc(3.5 * var(--scale-one))
+  );
+  color: $red_clr-main;
+}
+
+.bunner-bg-cntnr {
+  background-image: url("../asserts/imgs/bunner/bg.svg");
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}

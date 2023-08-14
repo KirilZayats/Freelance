@@ -1,0 +1,58 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "social-media";
+@import "banner";
+@import "recourse";
+@import "expert";
+@import "specialists";
+@import "partners";
+@import "approaches";
+@import "news";
+@import "contacts";
+@import "licenses";
+
+:root {
+  --scale-one: calc(1vh + 1vw);
+}
+
+body {
+  @include flex(column, start, center);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 1%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: $red_clr-main;
+  }
+}
+
+.m-body {
+  width: 100%;
+}
+
+.btn {
+  background-color: white;
+  padding-inline: 1.8rem;
+  padding-block: 0.6rem;
+}
+
+.btn-cstm-red {
+  border: solid $red_clr-main 1px;
+  color: $red_clr-main;
+  &:hover {
+    background-color: $red_clr-main;
+    color: white;
+  }
+}

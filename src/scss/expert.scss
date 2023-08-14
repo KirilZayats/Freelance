@@ -1,0 +1,126 @@
+.expert {
+  box-sizing: border-box;
+  padding: 5% 2% 5% 0;
+}
+
+.flx-expert {
+  box-sizing: border-box;
+  @include flex(row, end);
+  width: 100%;
+  padding-right: calc(6 * var(--scale-one));
+  border-width: 1px 1px 1px 0;
+  border-color: $peach_clr-brdr;
+  border-style: solid;
+  animation: 6s blink 2s ease-in-out infinite forwards;
+  padding-block: 3%;
+}
+
+.expert__title {
+  @include roboto(
+    300,
+    calc(4.5 * var(--scale-one)),
+    calc(4.5 * var(--scale-one))
+  );
+  text-transform: uppercase;
+	letter-spacing: -3px;
+  span {
+    @include roboto(
+      300,
+      calc(3.5 * var(--scale-one)),
+      calc(3.5 * var(--scale-one))
+    );
+  }
+}
+
+.expert__ps {
+  margin-block: 5%;
+  @include tTNorms(
+    300,
+    calc(0.8 * var(--scale-one)),
+    calc(0.8 * var(--scale-one))
+  );
+  color: $grey_clr-txt;
+  span {
+    color: $red_clr-main;
+  }
+}
+
+.btn-expert {
+  @include tTNorms(
+    400,
+    calc(0.7 * var(--scale-one)),
+    calc(0.7 * var(--scale-one))
+  );
+}
+
+.nav-cntnr__link {
+  margin-left: 3%;
+  @include tTNorms(
+    300,
+    calc(0.8 * var(--scale-one)),
+    calc(0.9 * var(--scale-one))
+  );
+  border-bottom: solid 1px #dadada;
+}
+
+.expert-numbers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 6%;
+  @include roboto(
+    700,
+    calc(4.5 * var(--scale-one)),
+    calc(4.5 * var(--scale-one))
+  );
+  color: $red_clr-main;
+  letter-spacing: -1px;
+}
+.expert-numbers-grid__el {
+  @include flex(row, start);
+  margin-bottom: 10%;
+  .num-text {
+    margin-left: 7%;
+    @include tTNorms(
+      400,
+      calc(0.8 * var(--scale-one)),
+      calc(0.8 * var(--scale-one))
+    );
+    color: black;
+    letter-spacing: -1px;
+  }
+  .num-cntnr {
+    display: flex;
+    position: relative;
+    background-color: white;
+    &::after {
+      position: absolute;
+      left: 60%;
+      top: -10%;
+      content: "";
+      display: flex;
+      z-index: -1;
+      width: 50%;
+      height: 120%;
+      border: 1px solid $peach_clr-brdr;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    background: url("../asserts/imgs/expert/face__close-eyes.png") no-repeat;
+    background-position: top left;
+    background-size: 33%;
+  }
+  50% {
+    background: url("../asserts/imgs/expert/face__open-eyes.png") no-repeat;
+    background-position: top left;
+    background-size: 33%;
+  }
+
+  100% {
+    background: url("../asserts/imgs/expert/face__close-eyes.png") no-repeat;
+    background-position: top left;
+    background-size: 33%;
+  }
+}

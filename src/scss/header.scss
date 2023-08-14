@@ -1,0 +1,54 @@
+@mixin tTNormsHeader {
+  @include tTNorms(
+    500,
+    calc(0.51 * var(--scale-one)),
+    calc(0.52 * var(--scale-one))
+  );
+}
+
+.btn-header {
+  @include tTNormsHeader();
+}
+
+.m-header {
+	position: fixed;
+  @include flex();
+  width: 100vw;
+  padding: 1%;
+	box-sizing: border-box;
+	z-index: 10000;
+}
+
+.flx-header {
+  width: 100%;
+  padding-inline: var(--scale-one);
+  @include flex(row, space-between);
+  @include tTNormsHeader();
+}
+
+.m-header-nav {
+  @include flex();
+}
+
+.nav-list {
+  @include flex(row, space-between);
+  list-style-type: none;
+  margin-block: 0;
+  padding: 0;
+}
+
+.nav-tab {
+  padding-inline: var(--scale-one);
+	&:first-child {
+		padding-left: 0;
+	}
+}
+
+.flx-header__logo {
+  width: calc(4.5 * var(--scale-one));
+  height: calc(1.4 * var(--scale-one));
+}
+
+.flex-header__tel {
+  color: $red_clr-main;
+}

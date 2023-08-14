@@ -1,0 +1,26 @@
+@mixin tTNorms($weight, $size, $l-height) {
+  font-family: TT Norms;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $l-height;
+}
+
+@mixin roboto($weight, $size, $l-height) {
+  font-family: "Roboto", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $l-height;
+}
+
+@mixin flex($fd: row, $jc: center, $ai: center) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin box-shadow($up, $l, $d, $r, $clr) {
+  -webkit-box-shadow: $up $l $d $r $clr;
+  -moz-box-shadow: $up $l $d $r $clr;
+  box-shadow: $up $l $d $r $clr;
+}

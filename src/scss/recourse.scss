@@ -1,0 +1,63 @@
+.recourse {
+  background-image: url("../asserts/imgs/recourse/banner_1.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #f1f1fb;
+}
+.flx-recourse {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  padding-inline: calc(6 * var(--scale-one));
+}
+
+.recourse-text-cntnr {
+  position: relative;
+  z-index: 1;
+  margin-top: 20%;
+  margin-bottom: 10%;
+  width: 55%;
+}
+
+.recourse__title {
+  @include roboto(
+    300,
+    calc(1.5 * var(--scale-one)),
+    calc(3 * var(--scale-one))
+  );
+	letter-spacing: -3px;
+	text-transform: uppercase;
+	text-align: end
+}
+
+.recourse__text {
+  @include tTNorms(
+    300,
+    calc(0.8 * var(--scale-one)),
+    calc(0.8 * var(--scale-one))
+  );
+	color: $grey_clr-txt;
+  text-align: end;
+  margin-bottom: 7%;
+  margin-top: 3%;
+}
+
+.recourse__auth-post {
+  text-align: end;
+  color: $red_clr-main;
+  @include tTNorms(
+    400,
+    calc(0.61 * var(--scale-one)),
+    calc(0.6 * var(--scale-one))
+  );
+}
+
+.recources__auth-name {
+  text-align: end;
+  @include tTNorms(
+    400,
+    calc(0.8 * var(--scale-one)),
+    calc(1.2 * var(--scale-one))
+  );
+}
